@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Target, TrendingUp, Users } from "lucide-react";
+import { CountUpNumber } from "./CountUpNumber";
 
 export function IronWealthAcademy() {
   const programs = [
@@ -90,11 +91,11 @@ export function IronWealthAcademy() {
             <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded p-6 border border-neutral-200">
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl tracking-tight">500+</div>
+                  <CountUpNumber end={500} suffix="+" className="text-2xl tracking-tight" />
                   <div className="text-xs text-neutral-500 tracking-wide">Members</div>
                 </div>
                 <div>
-                  <div className="text-2xl tracking-tight">12</div>
+                  <CountUpNumber end={12} className="text-2xl tracking-tight" />
                   <div className="text-xs text-neutral-500 tracking-wide">Programs</div>
                 </div>
                 <div>

@@ -1,6 +1,7 @@
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useRef } from "react";
+import { CountUpNumber } from "./CountUpNumber";
 
 export function Testimonials() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -147,15 +148,15 @@ export function Testimonials() {
         {/* Social Proof Stats */}
         <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-neutral-200">
           <div className="text-center">
-            <div className="text-3xl tracking-tight mb-2">10,000+</div>
+            <CountUpNumber end={10000} suffix="+" className="text-3xl tracking-tight mb-2" />
             <div className="text-sm text-neutral-500 tracking-wide">Happy Customers</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl tracking-tight mb-2">4.9/5</div>
+            <CountUpNumber end={4.9} decimals={1} suffix="/5" className="text-3xl tracking-tight mb-2" />
             <div className="text-sm text-neutral-500 tracking-wide">Average Rating</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl tracking-tight mb-2">2,500+</div>
+            <CountUpNumber end={2500} suffix="+" className="text-3xl tracking-tight mb-2" />
             <div className="text-sm text-neutral-500 tracking-wide">5-Star Reviews</div>
           </div>
         </div>
