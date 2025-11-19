@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { Navigation } from "./components/Navigation.jsx";
-import { Hero } from "./components/Hero.jsx";
-import { CategoryCards } from "./components/CategoryCards.jsx";
-import { GenderToggleSection } from "./components/GenderToggleSection.jsx";
-import { SupplementToggleSection } from "./components/SupplementToggleSection.jsx";
-import { QuizCTA } from "./components/QuizCTA.jsx";
-import { Footer } from "./components/Footer.jsx";
-import { LatestReleasesC } from "./components/LatestReleasesC.jsx";
-import { BrandAmbassador } from "./components/BrandAmbassador.jsx";
-import { IronWealthAcademy } from "./components/IronWealthAcademy.jsx";
-import { Testimonials } from "./components/Testimonials.jsx";
-import { ProductPage } from "./components/ProductPage.jsx";
+import { Navigation } from "./components/Navigation";
+import { Hero } from "./components/Hero";
+import { CategoryCards } from "./components/CategoryCards";
+import { GenderToggleSection } from "./components/GenderToggleSection";
+import { SupplementToggleSection } from "./components/SupplementToggleSection";
+import { QuizCTA } from "./components/QuizCTA";
+import { Footer } from "./components/Footer";
+import { LatestReleasesC } from "./components/LatestReleasesC";
+import { BrandAmbassador } from "./components/BrandAmbassador";
+import { IronWealthAcademy } from "./components/IronWealthAcademy";
+import { Testimonials } from "./components/Testimonials";
+import { ProductPage } from "./components/ProductPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
