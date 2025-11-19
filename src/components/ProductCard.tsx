@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
 import { Star } from "lucide-react";
@@ -45,10 +44,8 @@ export function ProductCard({ product, navigateToProduct }: ProductCardProps) {
   };
 
   return (
-    <motion.div
+    <div
       className="group relative space-y-3"
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       onClick={handleClick}
       style={{ cursor: navigateToProduct ? 'pointer' : 'default' }}
     >
@@ -115,7 +112,10 @@ export function ProductCard({ product, navigateToProduct }: ProductCardProps) {
             ))}
           </div>
           <button
-            onClick={() => setShowReviews(!showReviews)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowReviews(!showReviews);
+            }}
             className="text-xs text-neutral-500 hover:text-black transition-colors underline"
           >
             {reviewCount} {reviewCount === 1 ? "review" : "reviews"}
@@ -136,12 +136,7 @@ export function ProductCard({ product, navigateToProduct }: ProductCardProps) {
 
         {/* Reviews Section */}
         {showReviews && product.reviews && product.reviews.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="pt-4 mt-4 border-t border-neutral-200 space-y-3"
-          >
+          <div className="pt-4 mt-4 border-t border-neutral-200 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
             {product.reviews.map((review) => (
               <div key={review.id} className="space-y-1">
                 <div className="flex items-center gap-2">
@@ -163,9 +158,9 @@ export function ProductCard({ product, navigateToProduct }: ProductCardProps) {
                 <p className="text-xs text-neutral-400">{review.date}</p>
               </div>
             ))}
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }
