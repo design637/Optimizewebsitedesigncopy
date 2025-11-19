@@ -15,7 +15,18 @@
     "react-slick": "latest",
     "slick-carousel": "latest",
     "clsx": "latest",
-    "tailwind-merge": "latest"
+    "tailwind-merge": "latest",
+    "embla-carousel-autoplay": "latest",
+    "embla-carousel-react": "latest",
+    "class-variance-authority": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@radix-ui/react-tabs": "latest",
+    "@radix-ui/react-separator": "latest",
+    "@radix-ui/react-select": "latest",
+    "@radix-ui/react-radio-group": "latest",
+    "@radix-ui/react-label": "latest",
+    "@radix-ui/react-dialog": "latest",
+    "sonner": "^2.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
